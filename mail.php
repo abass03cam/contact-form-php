@@ -51,7 +51,7 @@ try {
     $confirmationMail->Port = 587;
 
     // Absender und Empfänger konfigurieren
-    $confirmationMail->setFrom('no-reply@example.com', 'Ihr Umzug');
+    $confirmationMail->setFrom('no-reply@example.com', 'Ihr Team');
     $confirmationMail->addAddress($email);
 
     // Bestätigungsmail-Inhalt konfigurieren
@@ -59,7 +59,7 @@ try {
     $confirmationMail->Subject = 'Bestaetigung Ihrer Nachricht';
     $confirmationMail->Body = 'Sehr geehrte*r ' . $first_name . ',<br><br>'
         . 'Vielen Dank für Ihre Nachricht! Wir haben Ihre Anfrage erhalten und werden uns so schnell wie möglich bei Ihnen melden.<br><br>'
-        . 'Mit freundlichem Gruß<br>Ihr Umzug';
+        . 'Mit freundlichem Gruß<br>Ihr Team';
 
     // Bestätigungsmail senden
     $confirmationMail->send();
