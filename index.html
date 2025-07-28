@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktformular</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #f4f7f6; font-size: 16px; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .container { width: 100%; max-width: 600px; padding: 40px; background: linear-gradient(135deg, #ffffff, #f1f3f5); border-radius: 15px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); }
+    h1 { text-align: center; font-family: 'Playfair Display', serif; color: #333; margin-bottom: 20px; font-size: 2rem; }
+    form { display: flex; flex-direction: column; gap: 15px; }
+    input, select, textarea { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; background-color: #fff; transition: all 0.3s; }
+    input:focus, select:focus, textarea:focus { border-color: #007BFF; outline: none; }
+    textarea { resize: vertical; min-height: 150px; }
+    input[type="submit"] { background-color: #007BFF; color: white; border: none; padding: 15px; font-size: 1.1rem; cursor: pointer; border-radius: 8px; transition: all 0.3s; }
+    input[type="submit"]:hover { background-color: #0056b3; }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Kontaktformular</h1>
+        <form action="mail.php" method="POST">
+            <input type="text" name="first_name" id="first_name" placeholder="Vorname *" required>
+            <input type="email" name="email" id="email" placeholder="Ihre Email *" required>
+            <input type="text" name="Betreff" id="betreff" placeholder="Ihr Betreff *" required>   
+            <textarea name="message" id="message" placeholder="Nachricht *" required></textarea>
+            <input type="submit" value="Absenden">
+        </form>
+    </div>
+</body>
+</html>
